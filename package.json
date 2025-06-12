@@ -1,0 +1,25 @@
+{
+  "name": "personalwebsite",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "tw:dev": "bunx @tailwindcss/cli -i ./src/input.css -o ./dist/global.css --watch",
+    "tw:build": "bunx @tailwindcss/cli -i ./src/input.css -o ./dist/global.css",
+    "dev": "concurrently \"bun run tw:dev\" \"bun build ./src/main.js --outdir ./dist\" \"bun run index.html\"",
+    "build": "concurrently \"bun run tw:build\" \"bun build ./src/main.js --outdir ./dist\""
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "concurrently": "^9.1.2"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.8",
+    "country-city-location": "^1.0.13",
+    "tailwindcss": "^4.1.8",
+    "typed.js": "^2.1.0"
+  }
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Website</title>
+    <link rel="stylesheet" href="dist/global.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+  </head>
+  <body class="font-display bg-slate-200">
+    <div class="border-2 max-w-7xl mx-auto mt-16">
+      <header class="flex h-18 justify-between m-8">
+        <a href="#" class="">Dark / Light</a>
+        <nav class="w-[270px] flex justify-between">
+          <a href="#">Portofolio</a>
+          <a
+            href="https://www.linkedin.com/in/pandu-akhbar-bb1146b1/"
+            target="_blank"
+            >Linkedin</a
+          >
+          <a href="https://github.com/panduakhbar" target="_blank">Github</a>
+        </nav>
+      </header>
+      <div class="flex justify-center space-x-16">
+        <img
+          src="assets/profilephoto.jpg"
+          width="280px"
+          height="280px"
+          class="border-2 rounded-full"
+        />
+        <div class="w-md content-center">
+          <span
+            class="font-extrabold text-4xl bg-amber-300"
+            id="element"
+          ></span>
+          <h2 class="mt-4">I'm Ryan Gosling</h2>
+          <p>
+            a self-proclaimed data analyst with a love for data visualization,
+            design, GIS, and web development.
+          </p>
+        </div>
+      </div>
+      <div class="text-center pt-8">
+        <div>Where are we going? No idea. But this map might help!</div>
+        <button
+          id="randomizeBtn"
+          class="mb-4 mt-4 px-10 py-1 border-2 bg-amber-300 rounded-lg cursor-pointer hover:bg-amber-500 transition"
+        >
+          Try me
+        </button>
+        <div id="map" class="w-3xl mx-auto border-2 rounded-lg mb-18"></div>
+      </div>
+    </div>
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="main.js"></script>
+  </body>
+</html>
