@@ -19,49 +19,65 @@
     />
   </head>
   <body class="font-display bg-slate-200">
-    <div class="border-2 max-w-7xl mx-auto mt-16">
-      <header class="flex h-18 justify-between m-8">
-        <a href="#" class="">Dark / Light</a>
-        <nav class="w-[270px] flex justify-between">
+    <div class="border-2 max-w-7xl mx-auto mt-16 px-4">
+      <!-- Header -->
+      <header
+        class="flex flex-col sm:flex-row justify-between items-center m-4 sm:m-8 gap-4"
+      >
+        <a href="#" class="text-sm sm:text-base">Dark / Light</a>
+        <nav class="flex flex-col sm:flex-row gap-2 sm:gap-6 text-center">
           <a href="#">Portofolio</a>
           <a
             href="https://www.linkedin.com/in/pandu-akhbar-bb1146b1/"
             target="_blank"
-            >Linkedin</a
+            >LinkedIn</a
           >
-          <a href="https://github.com/panduakhbar" target="_blank">Github</a>
+          <a href="https://github.com/panduakhbar" target="_blank">GitHub</a>
         </nav>
       </header>
-      <div class="flex justify-center space-x-16">
+
+      <!-- Profile Section -->
+      <div
+        class="flex flex-col lg:flex-row items-center justify-center gap-8 mt-10 px-4"
+      >
         <img
           src="assets/profilephoto.jpg"
-          width="280px"
-          height="280px"
-          class="border-2 rounded-full"
+          class="border-2 rounded-full w-48 h-48 sm:w-60 sm:h-60 lg:w-72 lg:h-72 object-cover"
+          alt="Profile Photo"
         />
-        <div class="w-md content-center">
+        <div class="text-center lg:text-left max-w-md">
           <span
-            class="font-extrabold text-4xl bg-amber-300"
+            class="font-extrabold text-3xl sm:text-4xl bg-amber-300 px-2"
             id="element"
           ></span>
-          <h2 class="mt-4">I'm Ryan Gosling</h2>
-          <p>
-            a self-proclaimed data analyst with a love for data visualization,
+          <h2 class="mt-4 text-xl sm:text-2xl font-semibold">
+            I'm Ryan Gosling
+          </h2>
+          <p class="mt-2 text-base sm:text-lg">
+            A self-proclaimed data analyst with a love for data visualization,
             design, GIS, and web development.
           </p>
         </div>
       </div>
-      <div class="text-center pt-8">
-        <div>Where are we going? No idea. But this map might help!</div>
+
+      <!-- Map Section -->
+      <div class="text-center pt-12 px-4">
+        <p class="text-base sm:text-lg">
+          Where are we going? No idea. But this map might help!
+        </p>
         <button
           id="randomizeBtn"
-          class="mb-4 mt-4 px-10 py-1 border-2 bg-amber-300 rounded-lg cursor-pointer hover:bg-amber-500 transition"
+          class="mb-4 mt-4 px-6 sm:px-10 py-2 border-2 bg-amber-300 rounded-lg hover:bg-amber-500 transition"
         >
           Try me
         </button>
-        <div id="map" class="w-3xl mx-auto border-2 rounded-lg mb-18"></div>
+        <div
+          id="map"
+          class="w-full h-[300px] sm:h-[400px] lg:h-[500px] border-2 rounded-lg mb-20"
+        ></div>
       </div>
     </div>
+
     <script
       src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
       integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
